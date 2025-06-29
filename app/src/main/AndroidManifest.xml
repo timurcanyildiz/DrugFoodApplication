@@ -23,9 +23,7 @@
         <activity android:name=".ui.view.RegisterActivity"/>
         <activity android:name=".ui.view.HomeActivity"/>
         <activity android:name=".ui.view.MedicationsActivity"/>
-        <activity android:name=".ui.view.ProfileActivity" />
 
-        <receiver android:name=".ui.view.ReminderReceiver" />
 
     </application>
 

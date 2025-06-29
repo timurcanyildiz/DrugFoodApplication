@@ -1,100 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="32dp"
+    android:fillViewport="true"
     android:background="#FFFFFF">
 
-    <!-- Uygulama Adı -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Drug Food App"
-        android:textSize="28sp"
-        android:textColor="#2E7D32"
-        android:fontFamily="@font/poppins_bold"
-        android:layout_marginBottom="8dp"/>
-
-    <!-- Slogan -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sincere • Fast • Epic"
-        android:textSize="16sp"
-        android:textColor="#616161"
-        android:fontFamily="@font/poppins_medium"
-        android:layout_marginBottom="24dp"/>
-
-    <!-- E-posta alanı -->
-    <EditText
-        android:id="@+id/editTextEmail"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:padding="12dp"
-        android:drawableStart="@drawable/ic_email"
-        android:background="@drawable/rounded_input"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
 
-    <!-- Şifre alanı -->
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:padding="12dp"
-        android:drawableStart="@drawable/ic_lock"
-        android:background="@drawable/rounded_input"
-        android:inputType="textPassword"
-        android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/textLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drug Food Application"
+            android:textSize="28sp"
+            android:textColor="#2E7D32"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="8dp"/>
 
-    <!-- Şifre unutma bağlantısı -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:textColor="#1976D2"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppins_regular"
-        android:layout_gravity="end"
-        android:layout_marginBottom="24dp"/>
+        <TextView
+            android:id="@+id/textSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sincere • Fast • Epic"
+            android:textSize="16sp"
+            android:textColor="#616161"
+            android:fontFamily="sans-serif"
+            android:layout_marginBottom="24dp"/>
 
-    <!-- Giriş Butonu -->
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#2E7D32"
-        android:textSize="16sp"
-        android:fontFamily="@font/poppins_semibold"
-        android:layout_marginBottom="12dp"/>
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
 
-    <!-- Kayıt butonu -->
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:textColor="#2E7D32"
-        android:backgroundTint="#FFFFFF"
-        android:textSize="16sp"
-        android:fontFamily="@font/poppins_semibold"
-        android:background="@drawable/border_button"
-        android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
-    <!-- Zaten hesap var mı -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already have an account?"
-        android:textColor="#757575"
-        android:textSize="14sp"
-        android:fontFamily="@font/poppins_regular"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/textForgotPassword"
+            android:layout_width="123dp"
+            android:layout_height="51dp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Forgot Password?"
+            android:textColor="#1976D2"
+            android:textSize="14sp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border_button"
+            android:backgroundTint="#FFFFFF"
+            android:text="Register"
+            android:textColor="#2E7D32"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

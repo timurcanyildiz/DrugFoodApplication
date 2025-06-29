@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:hint="Age"
+            android:inputType="number" />
+
+        <!-- Çekmeceli Disease Seçimi (Spinner) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disease"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerDisease"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="12dp" />
+
+        <CheckBox
+            android:id="@+id/checkBee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bee Allergy"/>
+        <CheckBox
+            android:id="@+id/checkPollen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pollen Allergy"/>
+        <CheckBox
+            android:id="@+id/checkPeanut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peanut Allergy"/>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
