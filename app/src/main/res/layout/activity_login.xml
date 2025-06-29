@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#FFFFFF">
+
+    <!-- Uygulama Adı -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drug Food App"
+        android:textSize="28sp"
+        android:textColor="#2E7D32"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Slogan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sincere • Fast • Epic"
+        android:textSize="16sp"
+        android:textColor="#616161"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- E-posta alanı -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:padding="12dp"
+        android:drawableStart="@drawable/ic_email"
+        android:background="@drawable/rounded_input"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Şifre alanı -->
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:padding="12dp"
+        android:drawableStart="@drawable/ic_lock"
+        android:background="@drawable/rounded_input"
+        android:inputType="textPassword"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Şifre unutma bağlantısı -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="#1976D2"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_gravity="end"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Giriş Butonu -->
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2E7D32"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Kayıt butonu -->
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="#2E7D32"
+        android:backgroundTint="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@drawable/border_button"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Zaten hesap var mı -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

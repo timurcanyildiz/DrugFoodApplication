@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DrugFoodApplication</string>
+    <string-array name="disease_list">
+        <item>None</item>
+        <item>Diabetes</item>
+        <item>Hypertension</item>
+        <item>Asthma</item>
+        <item>Epilepsy</item>
+        <item>Cardiac Disease</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>
