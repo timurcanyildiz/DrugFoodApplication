@@ -12,6 +12,10 @@ public class User {
     public String email;
     public String password;
     public int age;
+    public Integer weight;
+    public Integer height;
+    public String gender;
+
 
     // Yeni alanlar!
     public String diseases; // Örnek: "Asthma,Diabetes"

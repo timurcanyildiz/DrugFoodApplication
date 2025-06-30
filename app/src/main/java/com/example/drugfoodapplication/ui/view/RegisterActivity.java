@@ -121,6 +121,9 @@ public class RegisterActivity extends AppCompatActivity {
             newUser.age = age;
             newUser.diseases = diseasesAsString;
             newUser.allergies = allergiesAsString;
+            newUser.weight = null;
+            newUser.height = null;
+            newUser.gender = null;
 
             // ViewModel üzerinden kaydet!
             viewModel.registerUser(newUser);

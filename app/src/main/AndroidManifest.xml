@@ -25,6 +25,8 @@
             tools:ignore="Instantiatable" />
         <activity android:name=".ui.fragments.MedicationsFragment"
             tools:ignore="Instantiatable" />
+        <activity android:name=".ui.fragments.ProfileFragment"
+        tools:ignore="Instantiatable" />
         <activity android:name=".ui.view.HomeActivity"/>
         <activity android:name=".ui.view.MedicationsActivity"/>
 

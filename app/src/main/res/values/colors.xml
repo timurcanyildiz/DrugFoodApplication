@@ -14,4 +14,14 @@
     <color name="gray_text">#888888</color>
     <color name="blue_primary">#3F51B5</color>
     <color name="green">#4CAF50</color>
+
+    <color name="primary_color">#3F51B5</color>
+    <color name="background_light">#F5F6FA</color>
+    <color name="text_primary">#222222</color>
+    <color name="text_secondary">#888888</color>
+    <color name="black">#000000</color>
+    <color name="button_primary">#3F51B5</color>
+    <color name="button_logout">#D32F2F</color>
+    <color name="button_primary_pressed">#283593</color>
+    <color name="button_logout_pressed">#B71C1C</color>
 </resources>

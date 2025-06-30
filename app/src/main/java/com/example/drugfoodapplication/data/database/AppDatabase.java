@@ -9,7 +9,7 @@ import com.example.drugfoodapplication.data.dao.UserDao;
 import com.example.drugfoodapplication.data.entity.Medication;
 import com.example.drugfoodapplication.data.entity.User;
 
-@Database(entities = {User.class, Medication.class}, version = 3, exportSchema = false)
+@Database(entities = {User.class, Medication.class}, version = 4, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static volatile AppDatabase INSTANCE;
