@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.view.RegisterActivity"/>
+        <activity android:name=".ui.fragments.HomeFragment"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ui.fragments.MedicationsFragment"
+            tools:ignore="Instantiatable" />
         <activity android:name=".ui.view.HomeActivity"/>
         <activity android:name=".ui.view.MedicationsActivity"/>
 

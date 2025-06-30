@@ -3,4 +3,15 @@
     <color name="colorPrimaryDark">#0057A0</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="red">#F44336</color>
+
+    <!-- İstersen ek ekstra renkler -->
+    <color name="medication_bg">#F5F7FB</color>
+    <color name="gray_text">#888888</color>
+    <color name="blue_primary">#3F51B5</color>
+    <color name="green">#4CAF50</color>
 </resources>

@@ -20,6 +20,6 @@ public class HomeViewModel extends AndroidViewModel {
     }
 
     public void loadUser(String email) {
-        userLiveData = userDao.getUserByEmail(email);
+        User user = userDao.getUserByEmail(email);
     }
 }

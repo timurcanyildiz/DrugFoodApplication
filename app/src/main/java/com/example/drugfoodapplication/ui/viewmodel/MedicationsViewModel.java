@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-// Tüm ilaç ekleme, silme, güncelleme işlemleri burada yapılır
+// İlaç ekleme, silme, güncelleme işlemlerinin ViewModel'i
 public class MedicationsViewModel extends AndroidViewModel {
 
     private final MedicationDao medicationDao;
@@ -23,22 +23,18 @@ public class MedicationsViewModel extends AndroidViewModel {
         medicationDao = db.medicationDao();
     }
 
-    // Kullanıcıya özel ilaçları getir (LiveData ile otomatik güncellenir)
     public LiveData<List<Medication>> getMedicationsForUser(String userEmail) {
         return medicationDao.getMedicationsForUser(userEmail);
     }
 
-    // İlaç ekle
     public void insertMedication(Medication medication) {
         executor.execute(() -> medicationDao.insertMedication(medication));
     }
 
-    // İlaç sil
     public void deleteMedication(Medication medication) {
         executor.execute(() -> medicationDao.deleteMedication(medication));
     }
 
-    // İlaç güncelle
     public void updateMedication(Medication medication) {
         executor.execute(() -> medicationDao.updateMedication(medication));
     }

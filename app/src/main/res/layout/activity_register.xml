@@ -37,35 +37,27 @@
             android:inputType="number" />
 
         <!-- Çekmeceli Disease Seçimi (Spinner) -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Disease"
-            android:textSize="16sp"
-            android:layout_marginTop="12dp"/>
-
-        <Spinner
-            android:id="@+id/spinnerDisease"
+        <Button
+            android:id="@+id/buttonSelectDiseases"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginBottom="12dp" />
+            android:layout_height="wrap_content"
+            android:text="Select Diseases" />
+        <TextView
+            android:id="@+id/textSelectedDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No diseases selected" />
 
-        <CheckBox
-            android:id="@+id/checkBee"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/buttonSelectAllergies"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bee Allergy"/>
-        <CheckBox
-            android:id="@+id/checkPollen"
-            android:layout_width="wrap_content"
+            android:text="Select Allergies" />
+        <TextView
+            android:id="@+id/textSelectedAllergies"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pollen Allergy"/>
-        <CheckBox
-            android:id="@+id/checkPeanut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Peanut Allergy"/>
-
+            android:text="No allergies selected" />
         <Button
             android:id="@+id/buttonRegister"
             android:layout_width="match_parent"

@@ -62,7 +62,7 @@ public class MedicationsActivity extends AppCompatActivity {
                 viewModel.deleteMedication(medication);
             }
             @Override
-            public void onUpdate(Medication medication) {
+            public void onEdit(Medication medication) {
                 showAddOrUpdateDialog(medication);
             }
         });
@@ -91,8 +91,8 @@ public class MedicationsActivity extends AppCompatActivity {
         Spinner spinnerCategory = dialogView.findViewById(R.id.spinnerCategory);
         Spinner spinnerMedication = dialogView.findViewById(R.id.spinnerMedication);
         TextView textActiveSubstance = dialogView.findViewById(R.id.textActiveSubstance);
-        Spinner spinnerDosageType = dialogView.findViewById(R.id.spinnerDosageType);
-        LinearLayout layoutDoseTimes = dialogView.findViewById(R.id.layoutDoseTimes);
+        Spinner spinnerDosage = dialogView.findViewById(R.id.spinnerDosage);
+        LinearLayout layoutTimePickers = dialogView.findViewById(R.id.layoutTimePickers);
         Switch switchReminder = dialogView.findViewById(R.id.switchReminder);
 
         // Kategorileri spinner'a yükle
@@ -103,7 +103,7 @@ public class MedicationsActivity extends AppCompatActivity {
         // Dozaj tiplerini spinner'a yükle
         ArrayAdapter<String> dosageTypeAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, dosageTypes);
-        spinnerDosageType.setAdapter(dosageTypeAdapter);
+        spinnerDosage.setAdapter(dosageTypeAdapter);
 
         // Kategori seçilince ilgili ilaçlar spinner'a yüklenir
         spinnerCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -134,12 +134,12 @@ public class MedicationsActivity extends AppCompatActivity {
         });
 
         // Dozaj tipi seçilince uygun sayıda saat seçtireceğiz
-        spinnerDosageType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerDosage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                layoutDoseTimes.removeAllViews();
+                layoutTimePickers.removeAllViews();
                 int doseCount = 1; // Default
-                String selectedDosageType = (String) spinnerDosageType.getSelectedItem();
+                String selectedDosageType = (String) spinnerDosage.getSelectedItem();
                 if ("Günde 1".equals(selectedDosageType)) doseCount = 1;
                 else if ("Sabah-Akşam".equals(selectedDosageType)) doseCount = 2;
                 else if ("Sabah-Öğle-Akşam".equals(selectedDosageType)) doseCount = 3;
@@ -163,7 +163,7 @@ public class MedicationsActivity extends AppCompatActivity {
                                 }, hour, minute, true);
                         timePickerDialog.show();
                     });
-                    layoutDoseTimes.addView(btnTime);
+                    layoutTimePickers.addView(btnTime);
                 }
             }
             @Override
@@ -183,13 +183,13 @@ public class MedicationsActivity extends AppCompatActivity {
                 spinnerMedication.setSelection(meds.indexOf(medication.name));
             });
             textActiveSubstance.setText("Active Substance: " + medication.activeSubstance);
-            spinnerDosageType.setSelection(dosageTypes.indexOf(medication.dosageType));
+            spinnerDosage.setSelection(dosageTypes.indexOf(medication.dosageType));
             switchReminder.setChecked(medication.hasReminder);
             // Saatler
-            spinnerDosageType.post(() -> {
+            spinnerDosage.post(() -> {
                 String[] times = medication.doseTimes.split(",");
-                for (int i = 0; i < layoutDoseTimes.getChildCount() && i < times.length; i++) {
-                    Button btn = (Button) layoutDoseTimes.getChildAt(i);
+                for (int i = 0; i < layoutTimePickers.getChildCount() && i < times.length; i++) {
+                    Button btn = (Button) layoutTimePickers.getChildAt(i);
                     btn.setText(times[i]);
                     btn.setTag(times[i]);
                 }
@@ -201,12 +201,12 @@ public class MedicationsActivity extends AppCompatActivity {
             String selectedCategory = (String) spinnerCategory.getSelectedItem();
             String selectedMedication = (String) spinnerMedication.getSelectedItem();
             String activeSubstance = medicationActiveSubstance.get(selectedMedication);
-            String selectedDosageType = (String) spinnerDosageType.getSelectedItem();
+            String selectedDosageType = (String) spinnerDosage.getSelectedItem();
 
             // Saatleri topla
             List<String> times = new ArrayList<>();
-            for (int i = 0; i < layoutDoseTimes.getChildCount(); i++) {
-                Button btn = (Button) layoutDoseTimes.getChildAt(i);
+            for (int i = 0; i < layoutTimePickers.getChildCount(); i++) {
+                Button btn = (Button) layoutTimePickers.getChildAt(i);
                 Object tag = btn.getTag();
                 if (tag != null && tag.toString().contains(":")) {
                     times.add(tag.toString());

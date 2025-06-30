@@ -8,14 +8,12 @@ public class User {
     @PrimaryKey(autoGenerate = true)
     public int id;
 
-    public String userName;
+    public String name;
     public String email;
     public String password;
-
-    // Yeni eklenen alanlar
     public int age;
-    public String disease;
-    public boolean allergyBee;
-    public boolean allergyPollen;
-    public boolean allergyPeanut;
+
+    // Yeni alanlar!
+    public String diseases; // Örnek: "Asthma,Diabetes"
+    public String allergies; // Örnek: "Bee Allergy,Pollen Allergy"
 }

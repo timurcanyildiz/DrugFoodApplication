@@ -1,35 +1,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@drawable/bg_card">
+    android:background="@drawable/medication_item_bg">
 
     <TextView
         android:id="@+id/textMedicationName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Parol"
-        android:textSize="20sp"
+        android:text="Medication Name"
+        android:textSize="18sp"
         android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/textCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Painkiller"/>
+        android:text="Category"
+        android:textSize="14sp"/>
+
     <TextView
-        android:id="@+id/textSubstance"
+        android:id="@+id/textActiveSubstance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Paracetamol"/>
+        android:text="Active Substance"
+        android:textSize="14sp"/>
+
     <TextView
         android:id="@+id/textDosage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sabah-Akşam (08:00,20:00)"/>
-    <TextView
-        android:id="@+id/textReminder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reminder ON"/>
+        android:text="Dosage"
+        android:textSize="14sp"/>
+
+    <!-- Dikeyde boşluk -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+    <!-- Düğmeler yatayda yanyana -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
 </LinearLayout>

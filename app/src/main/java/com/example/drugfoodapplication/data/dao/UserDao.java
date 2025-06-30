@@ -10,7 +10,7 @@ import com.example.drugfoodapplication.data.entity.User;
 @Dao
 public interface UserDao {
     @Query("SELECT * FROM users WHERE email = :email LIMIT 1")
-    LiveData<User> getUserByEmail(String email);
+    User getUserByEmail(String email);
 
     @Query("SELECT * FROM users WHERE email = :email AND password = :password LIMIT 1")
     User getUserByEmailPassword(String email, String password);
