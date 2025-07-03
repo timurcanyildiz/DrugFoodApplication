@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Başlık Kartı -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_interactions"
+                android:layout_marginBottom="12dp"
+                app:tint="@color/primary_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="İlaç ve Besin Etkileşimi"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Kullandığınız ilaçlar ile tükettiğiniz besinler arasındaki etkileşimleri kolayca kontrol edin."
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Seçim ve Kontrol Kartı -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="İlaç Seçin"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/drug_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_card"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Besin Seçin"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/food_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_card"
+                android:padding="8dp"/>
+
+            <Button
+                android:id="@+id/check_interaction_btn"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/primary_color"
+                android:text="Etkileşimi Kontrol Et"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Sonuçlar Başlığı -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Etkileşim Sonuçları:"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Etkileşim Sonuçları Container -->
+    <LinearLayout
+        android:id="@+id/interactions_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"/>
+
+    <!-- Etkileşim Bulunamadı Mesajı -->
+    <TextView
+        android:id="@+id/no_interaction_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Henüz bir etkileşim kontrolü yapılmadı."
+        android:textAlignment="center"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_card"
+        android:textSize="15sp"
+        android:layout_margin="18dp"
+        android:visibility="visible"/>
+
+</LinearLayout>

@@ -24,4 +24,25 @@
     <color name="button_logout">#D32F2F</color>
     <color name="button_primary_pressed">#283593</color>
     <color name="button_logout_pressed">#B71C1C</color>
+    <!-- Temel Renkler -->
+    <color name="accent_color">#FF9800</color>
+    <color name="favorite_color">#FF5252</color>
+
+    <!-- Arka Plan -->
+    <color name="background_color">#F5F7FA</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="chip_background">#E3F1FF</color>
+    <color name="chip_selected">#2A90FF</color>
+    <color name="chip_text">#1976D2</color>
+
+    <!-- Metin -->
+    <color name="primary_text">#1C232B</color>
+    <color name="secondary_text">#6D7682</color>
+    <color name="icon_tint">#868E96</color>
+
+    <!-- Dark Mode -->
+    <color name="dm_background">#181B1E</color>
+    <color name="dm_card">#21242B</color>
+    <color name="dm_primary_text">#F5F7FA</color>
+    <color name="dm_secondary_text">#BFC7D1</color>
 </resources>

@@ -23,6 +23,10 @@
         <activity android:name=".ui.view.RegisterActivity"/>
         <activity android:name=".ui.fragments.HomeFragment"
             tools:ignore="Instantiatable" />
+        <activity android:name=".ui.fragments.InteractionsFragment"
+        tools:ignore="Instantiatable" />
+        <activity android:name=".ui.fragments.FoodFragment"
+        tools:ignore="Instantiatable" />
         <activity android:name=".ui.fragments.MedicationsFragment"
             tools:ignore="Instantiatable" />
         <activity android:name=".ui.fragments.ProfileFragment"

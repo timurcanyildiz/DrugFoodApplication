@@ -13,6 +13,6 @@ public class Medication {
     public String name;
     public String activeSubstance;
     public String dosageType; // Örn: "Günde 1", "Sabah-Akşam", "Sabah-Öğle-Akşam"
-    public String doseTimes; // JSON veya "," ile ayrılmış saatler ("08:00,20:00")
+    public String doseTimes; //
     public boolean hasReminder;
 }

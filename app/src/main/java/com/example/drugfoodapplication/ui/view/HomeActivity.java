@@ -64,13 +64,13 @@ public class HomeActivity extends AppCompatActivity {
             if (id == R.id.nav_medications) {
                 loadFragment(MedicationsFragment.newInstance(userEmail));
                 return true;
-            } /*else if (id == R.id.nav_food) {
-                loadFragment(FoodFragment.newInstance(userEmail));
+            }else if (id == R.id.nav_food) {
+                loadFragment(FoodFragment.newInstance(userEmail)); //
                 return true;
             } else if (id == R.id.nav_interactions) {
                 loadFragment(InteractionsFragment.newInstance(userEmail));
                 return true;
-            }*/ else if (id == R.id.nav_profile) {
+            } else if (id == R.id.nav_profile) {
                 loadFragment(ProfileFragment.newInstance(userEmail));
                 return true;
             }

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">DrugFoodApplication</string>
     <string name="go_to_home">Go to Home</string>
+    <string name="besin_ad">Besin adı</string>
+    <string name="aciklama">Açıklama</string>
     <string-array name="disease_list">
         <item>None</item>
         <item>Diabetes</item>
