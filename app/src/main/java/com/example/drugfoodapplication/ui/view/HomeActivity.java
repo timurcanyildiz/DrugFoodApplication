@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.drugfoodapplication.R;
-import com.example.drugfoodapplication.ui.fragments.HomeFragment;
 import com.example.drugfoodapplication.ui.fragments.FoodFragment;
+import com.example.drugfoodapplication.ui.fragments.HomeFragment;
 import com.example.drugfoodapplication.ui.fragments.InteractionsFragment;
 import com.example.drugfoodapplication.ui.fragments.MedicationsFragment;
 import com.example.drugfoodapplication.ui.fragments.ProfileFragment;

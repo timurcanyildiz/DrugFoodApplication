@@ -1,96 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
 
-    <!-- Top TabBar -->
+    <!-- Top Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_color"
+        android:elevation="4dp"
+        app:title="Besinler"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- Tab Layout -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="scrollable"
-        app:tabGravity="fill"
-        android:background="?attr/colorPrimary"
+        android:background="@color/primary_color"
         app:tabTextColor="@android:color/white"
-        app:tabSelectedTextColor="@color/primary_color"
-        app:tabIndicatorColor="@color/primary_color" />
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabMode="scrollable" />
 
-    <!-- Besin Listesi -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/food_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="80dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
-    <!-- Toplam Kalori -->
-    <TextView
-        android:id="@+id/text_total_calories"
+    <!-- Total Calories Display -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tüketilen Toplam Kalori: 0 kcal"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:layout_gravity="bottom"
-        android:layout_margin="8dp"
-        android:background="#F6F6F6"
-        android:textColor="@color/primary_color"
-        android:gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"/>
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/card_background">
 
-    <!-- Ekle Butonu -->
+        <TextView
+            android:id="@+id/totalCaloriesText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Toplam Kalori: 0 kcal"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Günlük Takip"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView for Foods -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_food" />
+
+    <!-- Floating Action Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_food_fab"
+        android:id="@+id/fabAddFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/ic_add"
-        app:tint="@android:color/white"
-        app:backgroundTint="@color/primary_color" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        app:backgroundTint="@color/accent_color" />
 
-        <!-- Arama Barı -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Besin ara..."
-            app:startIconDrawable="@drawable/ic_search"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginBottom="12dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/search_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:imeOptions="actionSearch" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Kategori ChipGroup -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="none"
-            android:layout_marginBottom="8dp">
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/category_chip_group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:singleLine="true"
-                app:selectionRequired="true" />
-        </HorizontalScrollView>
-
-    </LinearLayout>
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

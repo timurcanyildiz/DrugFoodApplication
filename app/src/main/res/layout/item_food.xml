@@ -1,60 +1,123 @@
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/card_background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp">
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <!-- Food Header -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Food Icon -->
+            <ImageView
+                android:id="@+id/foodIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_food_default"
+                android:background="@drawable/circle_background"
+                android:padding="12dp"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Food Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/foodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tavuk Göğsü"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/foodCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Protein"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginTop="2dp" />
+
+                <TextView
+                    android:id="@+id/foodPortion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 porsiyon"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <!-- Calories -->
             <TextView
-                android:id="@+id/food_name"
+                android:id="@+id/foodCalories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="165 kcal"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@color/primary_text"/>
-            <TextView
-                android:id="@+id/food_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="@color/secondary_text"/>
-            <TextView
-                android:id="@+id/food_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="@color/secondary_text"/>
-            <TextView
-                android:id="@+id/food_calories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:textColor="@color/primary_color"/>
+                android:textColor="@color/accent_color"
+                android:background="@drawable/calories_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Favorite Button -->
+            <ImageButton
+                android:id="@+id/favoriteButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_favorite_border"
+                android:background="@drawable/circular_button"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Delete Button -->
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_delete"
+                android:background="@drawable/circular_button" />
+
         </LinearLayout>
-        <ImageView
-            android:id="@+id/favorite_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_favorite_outline"
-            android:padding="4dp"/>
-        <ImageView
-            android:id="@+id/consumed_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_add"
-            android:padding="4dp"/>
+
+        <!-- Food Description -->
+        <TextView
+            android:id="@+id/foodDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yüksek protein, az yağ"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="64dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="64dp" />
+
     </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+
+</androidx.cardview.widget.CardView>

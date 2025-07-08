@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Eğer layout kullanmayacaksan, aşağıdaki satırı silebilirsin:
+
         // setContentView(R.layout.activity_main);
 
         // Örnek: Otomatik olarak Login ekranına yönlendir

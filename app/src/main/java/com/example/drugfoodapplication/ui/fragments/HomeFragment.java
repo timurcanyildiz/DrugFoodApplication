@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
         TextView welcomeText = view.findViewById(R.id.welcomeUser);
         TextView dateText = view.findViewById(R.id.textDate);
 
-        // Burada userEmail'den Room ile isim çekebilirsin. Örnek olarak email gösteriyorum.
+        // Burada Örnek olarak email. İsim de gösterilebilir.
         if (userEmail != null) {
             welcomeText.setText("Welcome, " + userEmail + "!");
         } else {

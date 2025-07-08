@@ -14,13 +14,14 @@ import com.example.drugfoodapplication.data.entity.Interaction;
 import com.example.drugfoodapplication.data.entity.Medication;
 import com.example.drugfoodapplication.data.entity.User;
 
-@Database(entities = {User.class, Medication.class, Food.class, Interaction.class}, version = 10, exportSchema = false)
+@Database(entities = {User.class, Medication.class, Food.class, Interaction.class}, version = 14, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static volatile AppDatabase INSTANCE;
 
     public abstract UserDao userDao();
     public abstract MedicationDao medicationDao();
+   // public abstract FoodDao foodDao();
     public abstract FoodDao foodDao();
     public abstract InteractionDao interactionDao();
 
